@@ -51,3 +51,8 @@ label{
   color: #0069D9;
 }
 
+.completed{
+  text-decoration: line-through;
+  color: #dddddd;
+}
+
