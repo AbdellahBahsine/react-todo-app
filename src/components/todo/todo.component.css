@@ -1,0 +1,27 @@
+.todo{
+    display: flex;
+    align-items: center;
+    border: 1px solid #85FFBD;
+    list-style: none;
+    padding: 8px;
+    width: 100%;
+}
+
+label{
+    justify-self: flex-start;
+    margin: 0;
+}
+
+.edit{
+    margin-left: auto;
+    margin-right: 8px;
+}
+
+.edit, .trash{
+    color: #FFFB7D;
+    cursor: pointer;
+}
+
+.edit:hover, .trash:hover{
+    color: #e0dd70;
+}
