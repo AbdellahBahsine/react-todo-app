@@ -20,18 +20,22 @@ const Todo = props => {
         setEditing(false);
     }
 
+    const handleToggle = () => {
+        props.ToggleComplete(props.id)
+    }
+
     if(editing){
         return (
-            <form onSubmit={handleUpdate}>
-                <input type="text" value={task} onChange={handleChange} />
-                <button>Save</button>
-            </form>
+            <form onSubmit={handleUpdate} className="edit-form" >
+                <input type="text" className="edit-input" value={task} onChange={handleChange} />
+                <button className="edit-btn">Save</button>
+            </form> 
         )
     } else{
         return (
             <li className="todo">
-                <input id="todo" type="checkbox" onClick={() => props.ToggleComplete(props.id)} />
-                <label htmlFor="todo" className={props.completed ? "completed" : ""}>
+                <input type="checkbox" className="checkbox" onClick={handleToggle} />
+                <label className={props.completed ? "completed" : ""}>
                     {props.task}
                 </label>
                 <i className="far fa-edit edit" onClick={() => ToggleEdit(props.id)}></i>

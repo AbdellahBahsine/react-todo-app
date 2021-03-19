@@ -5,11 +5,24 @@
     list-style: none;
     padding: 8px;
     width: 100%;
+    margin-bottom: 15px;
+}
+
+.todo:last-child{
+    margin-bottom: 0;
 }
 
 label{
     justify-self: flex-start;
-    margin: 0;
+    margin: 0 0 0 10px;
+    -webkit-user-select: none;  
+    -ms-user-select: none; 
+    user-select: none;
+}
+
+.completed{
+    text-decoration: line-through;
+    color:#85FFBD;
 }
 
 .edit{
@@ -24,4 +37,26 @@ label{
 
 .edit:hover, .trash:hover{
     color: #e0dd70;
+}
+
+.edit-form{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.edit-form:last-child{
+    margin-bottom:0;
+}
+
+.edit-input{
+    height: 100%;
+    width: 70%;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+}
+
+.edit-btn{
+    margin-left: auto;
 }

@@ -5,9 +5,22 @@ import './todos-list.component.css';
 import Todo from '../todo/todo.component';
 import AddTodoForm from '../add-todo-form/add-todo-form.component';
 
+import { v4 as uuidv4 } from 'uuid';
+
 const TodosList = () => {
 
-    const [todos, setTodos] = useState([]);
+    const [todos, setTodos] = useState([
+        {
+            id: uuidv4(), 
+            name: "Read A Book About History", 
+            completed: false
+        },
+        {
+            id: uuidv4(), 
+            name: "Watch My Favorite Tv Show", 
+            completed: false
+        }
+    ]);
 
     const removeTodo = (id) => {
         setTodos(todos.filter(todo => todo.id !== id))
