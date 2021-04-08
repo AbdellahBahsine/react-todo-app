@@ -6,9 +6,9 @@ function App() {
   
 
   return (
-    <div className="App">
-      <h1>React Todo List</h1>
-      <TodosList />
+    <div className="app">
+        <h1>React Todo List</h1>
+        <TodosList />
       <p>Created By Abdellah Bahsine</p>
     </div>
   );
